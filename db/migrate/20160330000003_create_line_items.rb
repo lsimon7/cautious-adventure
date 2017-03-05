@@ -6,13 +6,13 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/rails5 for more book information.
 #---
-Rails.application.routes.draw do
-  resources :line_items
-  resources :carts
-  root 'store#index', as: 'store_index'
+class CreateLineItems < ActiveRecord::Migration[5.0]
+  def change
+    create_table :line_items do |t|
+      t.references :product, foreign_key: true
+      t.belongs_to :cart, foreign_key: true
 
-  resources :products
-  # For details on the DSL available within this file, see
-  # http://guides.rubyonrails.org/routing.html
+      t.timestamps
+    end
+  end
 end
-
