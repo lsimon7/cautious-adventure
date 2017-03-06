@@ -19,10 +19,17 @@
     </td>
 
     <td class="list_actions">
+<<<<<<< HEAD
       <%= link_to 'Show', product %><br/>
       <%= link_to 'Edit', edit_product_path(product) %><br/>
       <%= link_to 'Destroy', product, method: :delete,
                   data: { confirm: 'Are you sure?' } %>
+=======
+      <%= link_to 'Show', product , class:"btn btn-xs btn-danger" %><br/>
+      <%= link_to 'Edit', edit_product_path(product) , class:"btn btn-xs btn-danger" %><br/>
+      <%= link_to 'Destroy', product, method: :delete,
+                  data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %>
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd
     </td>
   </tr>
 <% end %>
@@ -30,4 +37,8 @@
 
 <br />
 
+<<<<<<< HEAD
 <%= link_to 'New product', new_product_path %>
+=======
+<%= link_to 'New product', new_product_path , class:"btn btn-xs btn-danger" %>
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <title>Pragprog Books Online Store</title>
   <%= stylesheet_link_tag    "application", media: "all",
@@ -26,4 +27,19 @@
     </div>
   </div>
 </body>
+=======
+  <head>
+    <title>Depot</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class='<%= controller.controller_name%>'>
+   
+    <%= yield %>
+    
+  </body>
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd
 </html>

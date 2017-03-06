@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #---
 # Excerpted from "Agile Web Development with Rails 5",
 # published by The Pragmatic Bookshelf.
@@ -32,4 +33,14 @@ class Product < ApplicationRecord
         throw :abort
       end
     end
+=======
+class Product < ActiveRecord::Base
+    validates :title, :description, :image_url, presence: true
+    validates :title, uniqueness: true
+    validates :price, numericality: {greater_than_or_equal_to: 0.01}
+    validates :image_url, allow_blank: true, format:{
+        with: %r{\.(gif|jpg|png)\Z}i,
+        message: 'must be a URL for GIF, JPG or PNG image.'
+    }
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd
 end

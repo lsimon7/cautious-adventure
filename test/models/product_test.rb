@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
@@ -40,6 +41,21 @@ class ProductTest < ActiveSupport::TestCase
              http://a.b.c/x/y/z/fred.gif }
     bad = %w{ fred.doc fred.gif/more fred.gif.more }
     
+=======
+def new_product(image_url)
+  Product.new(title:      "My book title",
+              description:   "yyy",
+              price:             1,
+              image_url:    image_url)
+              
+            end
+            
+test "image url" do
+    ok = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg
+      http://a.b.c/x/y/z/fred.gif }
+    bad = %w{ fred.doc fred.gif/more fred.gif.more }
+
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd
     ok.each do |name|
       assert new_product(name).valid?, "#{name} shouldn't be invalid"
     end
@@ -48,6 +64,7 @@ class ProductTest < ActiveSupport::TestCase
       assert new_product(name).invalid?, "#{name} shouldn't be valid"
     end
   end
+<<<<<<< HEAD
 
   test "product is not valid without a unique title" do
     product = Product.new(title:       products(:ruby).title,
@@ -71,3 +88,16 @@ class ProductTest < ActiveSupport::TestCase
   end
   
 end
+=======
+  
+  test "product is not balid without a unique title" do
+      product = Product.new(title:    products(:ruby). title,
+                            description:    "yyyy",
+                            price:            1,
+                            image_url:          "fred.gif")
+                            
+                            
+      assert product.invalid?
+      assert_equal ["has already been taken"], product.errors[:title]
+    end
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd

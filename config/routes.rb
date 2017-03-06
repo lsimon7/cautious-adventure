@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #---
 # Excerpted from "Agile Web Development with Rails 5",
 # published by The Pragmatic Bookshelf.
@@ -16,3 +17,9 @@ Rails.application.routes.draw do
   # http://guides.rubyonrails.org/routing.html
 end
 
+=======
+Rails.application.routes.draw do
+  resources :products
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd

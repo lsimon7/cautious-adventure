@@ -53,4 +53,7 @@ Product.create(title: 'Ruby Performance Optimization',
       </p>},
   image_url: 'adrpo.jpg',
   price: 46.00)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 647f2c7bdb7619a5243d0216033aa53c81b523bd
